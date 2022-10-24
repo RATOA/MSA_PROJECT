@@ -24,9 +24,7 @@ def index(request):
     user = request.user
     all_users = User.objects.all()
     follow_status = Follow.objects.filter(following=user, follower=request.user).exists()
-
     profile = Profile.objects.all()
-
     posts = Stream.objects.filter(user=user)
     group_ids = []
 
@@ -121,7 +119,6 @@ def Tags(request, tag_slug):
     return render(request, 'tag.html', context)
 
 
-# Like function
 @login_required
 def like(request, post_id):
     user = request.user
@@ -138,7 +135,6 @@ def like(request, post_id):
 
     post.likes = current_likes
     post.save()
-    # return HttpResponseRedirect(reverse('post-details', args=[post_id]))
     return HttpResponseRedirect(reverse('post-details', args=[post_id]))
 
 

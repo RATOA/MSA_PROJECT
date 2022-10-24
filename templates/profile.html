@@ -12,10 +12,8 @@
     <meta name="author" content="George W. Park">
     <meta name="description" content="This project demonstrates how CSS grid (with flexbox and float fallback) can be used to re-create the layout of an Instagram profile page.">
 
-    <!-- Title -->
     <title>Cookiz Profile Layout</title>
 
-    <!-- External CSS Files -->
     <link rel="stylesheet" href="{% static 'assets3/css/reset.css' %}">
     <link rel="stylesheet" href="{% static 'assets3/css/styles.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
@@ -62,15 +60,7 @@
                                 <a href="{% url 'conversation' profile.user  %}" class="btn profile-edit-btn">Message</a> <br><br>
                         {% endif %}
                         <br>
-
-                    
-                    
-                    
-                    
-
                 </div>
-
-                
 
                 <div class="profile-bio">
                     <br>
@@ -105,10 +95,8 @@
                 </div>
 
             </div>
-            <!-- End of profile section -->
 
         </div>
-        <!-- End of container -->
 
     </header>
     
@@ -134,17 +122,9 @@
 
                 </div></a>
                 {% endfor %}
-
-                
-
-                
-
             </div>
-            <!-- End of gallery -->
-
 
         </div>
-        <!-- End of container -->
 
     </main>
     {% endblock content %}
